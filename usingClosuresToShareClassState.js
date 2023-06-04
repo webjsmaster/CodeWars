@@ -7,6 +7,8 @@ const Cat = (function () {
         }
         let w = weight;
         sum += w;
+
+        console.log('🤡:', w)
         count++;
         Object.defineProperty(this, 'weight', {
             get: function () {
@@ -21,6 +23,10 @@ const Cat = (function () {
     cat.averageWeight = function () {
         return sum / count;
     }
+
+    cat.test1 = () => {
+        return 'test'
+    }
     return cat;
 }());
 
@@ -29,4 +35,5 @@ const garfield = new Cat('garfield', 25)
 const felix = new Cat('felix', 15)
 
 console.log('🌻:', Cat.averageWeight())
+console.log('🍄:', Cat.test1())
 
